@@ -1,0 +1,501 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Email Signature Design | Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #e9edf3;
+        --ink: #0f1b2d;
+        --muted: #55637a;
+        --card: #ffffff;
+        --line: #d3dae6;
+        --accent: #2563eb;
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Manrope", Arial, sans-serif;
+        line-height: 1.6;
+      }
+      .wrap {
+        max-width: 880px;
+        margin: 0 auto;
+        padding: 56px 20px 80px;
+      }
+      h1 {
+        font-size: clamp(2rem, 5vw, 3.2rem);
+        line-height: 1.1;
+        margin: 0 0 16px;
+        font-weight: 800;
+        letter-spacing: -0.02em;
+      }
+      .intro {
+        max-width: 60ch;
+        color: var(--muted);
+        font-size: 1.05rem;
+        margin: 0 0 40px;
+      }
+      .facts {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+        gap: 12px;
+        margin: 0 0 56px;
+        padding: 0;
+        list-style: none;
+      }
+      .facts li {
+        border-top: 2px solid var(--ink);
+        padding-top: 10px;
+        font-size: 0.92rem;
+        color: var(--muted);
+      }
+      .facts strong {
+        display: block;
+        color: var(--ink);
+        font-size: 1rem;
+      }
+
+      h2 {
+        font-size: 1.25rem;
+        margin: 0 0 4px;
+        font-weight: 800;
+      }
+      .note {
+        margin: 0 0 14px;
+        color: var(--muted);
+        font-size: 0.92rem;
+      }
+
+      /* Fake email window that frames each signature */
+      .mail {
+        background: var(--card);
+        border: 1px solid var(--line);
+        border-radius: 10px;
+        margin-bottom: 44px;
+        overflow: hidden;
+      }
+      .mail-bar {
+        background: #f5f7fb;
+        border-bottom: 1px solid var(--line);
+        padding: 10px 16px;
+        font-size: 0.8rem;
+        color: var(--muted);
+      }
+      .mail-body {
+        padding: 26px 24px 30px;
+        overflow-x: auto;
+      }
+      .mail-body p.msg {
+        margin: 0 0 22px;
+        color: #333;
+        font-size: 0.95rem;
+      }
+
+      .stack {
+        background: var(--ink);
+        color: #dbe4f3;
+        border-radius: 10px;
+        padding: 28px 24px;
+      }
+      .stack h2 {
+        color: #fff;
+      }
+      .stack ul {
+        margin: 10px 0 0;
+        padding-left: 20px;
+      }
+      .stack li {
+        margin-bottom: 6px;
+      }
+
+      :focus-visible {
+        outline: 3px solid var(--accent);
+        outline-offset: 2px;
+      }
+    </style>
+  </head>
+  <body>
+    <main class="wrap">
+      <h1>HTML email signatures that render everywhere</h1>
+      <p class="intro">
+        Three table-based signature designs, built with inline CSS so they
+        display consistently in Gmail, Outlook, Apple Mail and on mobile.
+        Contact details below are samples.
+      </p>
+
+      <ul class="facts">
+        <li><strong>Role</strong>Web and email template developer</li>
+        <li><strong>Tools</strong>HTML, inline CSS, VS Code</li>
+        <li><strong>Tested in</strong>Gmail, Outlook, mobile</li>
+      </ul>
+
+      <!-- ================= DESIGN 1 ================= -->
+      <h2>Design 1: Classic with initials badge</h2>
+      <p class="note">
+        A badge replaces the photo, so there is no image to host or block.
+      </p>
+      <section class="mail" aria-label="Design 1 preview">
+        <div class="mail-bar">
+          To: client@example.com &nbsp;|&nbsp; Subject: Project update
+        </div>
+        <div class="mail-body">
+          <p class="msg">
+            Thanks for the quick feedback. I will send the revised files
+            tomorrow.<br />Best regards,
+          </p>
+
+          <!-- SIGNATURE 1 START -->
+          <table
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            style="
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 14px;
+              line-height: 1.5;
+              color: #333333;
+            "
+          >
+            <tr>
+              <td valign="top" style="padding-right: 16px">
+                <table cellpadding="0" cellspacing="0" border="0">
+                  <tr>
+                    <td
+                      width="80"
+                      height="80"
+                      align="center"
+                      valign="middle"
+                      style="
+                        width: 80px;
+                        height: 80px;
+                        background: #2563eb;
+                        border-radius: 40px;
+                        color: #ffffff;
+                        font-size: 28px;
+                        font-weight: bold;
+                        font-family: Arial, Helvetica, sans-serif;
+                      "
+                    >
+                      TD
+                    </td>
+                  </tr>
+                </table>
+              </td>
+              <td
+                valign="top"
+                style="border-left: 3px solid #2563eb; padding-left: 16px"
+              >
+                <p
+                  style="
+                    margin: 0;
+                    font-size: 19px;
+                    font-weight: bold;
+                    color: #0f1b2d;
+                  "
+                >
+                  Tamiru Dereje
+                </p>
+                <p
+                  style="
+                    margin: 2px 0 8px 0;
+                    font-size: 13px;
+                    font-weight: bold;
+                    color: #2563eb;
+                  "
+                >
+                  Full-Stack SaaS Developer &amp; React, Node.js, Spring Boot & PostgreSQL
+                </p>
+                <table
+                  cellpadding="0"
+                  cellspacing="0"
+                  border="0"
+                  style="font-size: 13px; color: #555555"
+                >
+                  <tr>
+                    <td
+                      style="
+                        padding: 2px 8px 2px 0;
+                        font-weight: bold;
+                        color: #2563eb;
+                      "
+                    >
+                      E
+                    </td>
+                    <td style="padding: 2px 0">
+                      <a
+                        href="mailto:name@company.com"
+                        style="color: #333333; text-decoration: none"
+                        >name@company.com</a
+                      >
+                    </td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="
+                        padding: 2px 8px 2px 0;
+                        font-weight: bold;
+                        color: #2563eb;
+                      "
+                    >
+                      P
+                    </td>
+                    <td style="padding: 2px 0">+000 000 000 000</td>
+                  </tr>
+                  <tr>
+                    <td
+                      style="
+                        padding: 2px 8px 2px 0;
+                        font-weight: bold;
+                        color: #2563eb;
+                      "
+                    >
+                      W
+                    </td>
+                    <td style="padding: 2px 0">
+                      <a
+                        href="https://example.com"
+                        style="color: #333333; text-decoration: none"
+                        >www.example.com</a
+                      >
+                    </td>
+                  </tr>
+                </table>
+                <p style="margin: 10px 0 0 0; font-size: 12px">
+                  <a
+                    href="https://linkedin.com"
+                    style="
+                      color: #2563eb;
+                      text-decoration: none;
+                      font-weight: bold;
+                    "
+                    >LinkedIn</a
+                  >
+                  <span style="color: #cccccc">&nbsp;|&nbsp;</span>
+                  <a
+                    href="https://github.com"
+                    style="
+                      color: #2563eb;
+                      text-decoration: none;
+                      font-weight: bold;
+                    "
+                    >GitHub</a
+                  >
+                  <span style="color: #cccccc">&nbsp;|&nbsp;</span>
+                  <a
+                    href="https://behance.net"
+                    style="
+                      color: #2563eb;
+                      text-decoration: none;
+                      font-weight: bold;
+                    "
+                    >Behance</a
+                  >
+                </p>
+              </td>
+            </tr>
+          </table>
+          <!-- SIGNATURE 1 END -->
+        </div>
+      </section>
+
+      <!-- ================= DESIGN 2 ================= -->
+      <h2>Design 2: Minimal text only</h2>
+      <p class="note">
+        Lightest option. Loads instantly and works even when images are blocked.
+      </p>
+      <section class="mail" aria-label="Design 2 preview">
+        <div class="mail-bar">
+          To: client@example.com &nbsp;|&nbsp; Subject: Invoice attached
+        </div>
+        <div class="mail-body">
+          <p class="msg">
+            Please find the invoice attached.<br />Kind regards,
+          </p>
+
+          <!-- SIGNATURE 2 START -->
+          <table
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            style="
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 13px;
+              line-height: 1.6;
+              color: #444444;
+            "
+          >
+            <tr>
+              <td style="font-size: 16px; font-weight: bold; color: #111111">
+                Tamiru Dereje
+              </td>
+            </tr>
+            <tr>
+              <td style="padding-bottom: 8px; color: #777777">
+                Web Developer, Example Studio
+              </td>
+            </tr>
+            <tr>
+              <td style="border-top: 1px solid #dddddd; padding-top: 8px">
+                <a
+                  href="mailto:name@company.com"
+                  style="color: #111111; text-decoration: none"
+                  >name@company.com</a
+                >
+                &nbsp;&bull;&nbsp; +000 000 000 000 &nbsp;&bull;&nbsp;
+                <a
+                  href="https://example.com"
+                  style="color: #2563eb; text-decoration: none"
+                  >example.com</a
+                >
+              </td>
+            </tr>
+          </table>
+          <!-- SIGNATURE 2 END -->
+        </div>
+      </section>
+
+      <!-- ================= DESIGN 3 ================= -->
+      <h2>Design 3: Bold banner with call-to-action button</h2>
+      <p class="note">
+        Dark header block and a bulletproof button that works in Outlook.
+      </p>
+      <section class="mail" aria-label="Design 3 preview">
+        <div class="mail-bar">
+          To: client@example.com &nbsp;|&nbsp; Subject: Next steps
+        </div>
+        <div class="mail-body">
+          <p class="msg">
+            Happy to talk through the proposal whenever suits you.<br />Warm
+            regards,
+          </p>
+
+          <!-- SIGNATURE 3 START -->
+          <table
+            cellpadding="0"
+            cellspacing="0"
+            border="0"
+            width="480"
+            style="
+              width: 480px;
+              max-width: 100%;
+              font-family: Arial, Helvetica, sans-serif;
+              font-size: 13px;
+              color: #444444;
+            "
+          >
+            <tr>
+              <td
+                style="
+                  background: #0f1b2d;
+                  padding: 16px 20px;
+                  border-radius: 8px 8px 0 0;
+                "
+              >
+                <p
+                  style="
+                    margin: 0;
+                    font-size: 18px;
+                    font-weight: bold;
+                    color: #ffffff;
+                  "
+                >
+                  Tamiru Dereje
+                </p>
+                <p style="margin: 2px 0 0 0; font-size: 12px; color: #93c5fd">
+                  Full-Stack SaaS Developer &amp; React, Node.js, Spring Boot & PostgreSQL
+                </p>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="
+                  border: 1px solid #e5e7eb;
+                  border-top: 0;
+                  padding: 16px 20px;
+                  border-radius: 0 0 8px 8px;
+                "
+              >
+                <table cellpadding="0" cellspacing="0" border="0" width="100%">
+                  <tr>
+                    <td
+                      valign="middle"
+                      style="font-size: 13px; line-height: 1.7"
+                    >
+                      <a
+                        href="mailto:name@company.com"
+                        style="color: #333333; text-decoration: none"
+                        >name@company.com</a
+                      ><br />
+                      +000 000 000 000<br />
+                      <a
+                        href="https://example.com"
+                        style="color: #2563eb; text-decoration: none"
+                        >www.example.com</a
+                      >
+                    </td>
+                    <td valign="middle" align="right">
+                      <table cellpadding="0" cellspacing="0" border="0">
+                        <tr>
+                          <td
+                            align="center"
+                            bgcolor="#2563eb"
+                            style="background: #2563eb; border-radius: 6px"
+                          >
+                            <a
+                              href="https://example.com/book"
+                              style="
+                                display: inline-block;
+                                padding: 10px 18px;
+                                font-size: 13px;
+                                font-weight: bold;
+                                color: #ffffff;
+                                text-decoration: none;
+                                font-family: Arial, Helvetica, sans-serif;
+                              "
+                              >Book a call</a
+                            >
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+          <!-- SIGNATURE 3 END -->
+        </div>
+      </section>
+
+      <section class="stack" aria-label="Project details">
+        <h2>About this project</h2>
+        <ul>
+          <li>
+            <strong>Challenge:</strong> email clients ignore modern CSS, so
+            layouts break easily.
+          </li>
+          <li>
+            <strong>Solution:</strong> nested tables, inline styles and
+            bulletproof buttons.
+          </li>
+          <li>
+            <strong>Result:</strong> three reusable, mobile-friendly signature
+            templates.
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
